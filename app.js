@@ -1,22 +1,21 @@
 document.getElementById("test").addEventListener("click", ()=> {
-    console.log("clicked")
-    console.log(sendData("data"))
+    const data = { key: document.getElementById("inputText").value };
+    sendDataToServer(data);
 })
 
-
-async function sendData(data) {
-    const response = await fetch('http://127.0.0.1:5000', {
+async function sendDataToServer(data) {
+    const response = await fetch('http://127.0.0.1:5000/process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
     });
-
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
+    
+    if (response.ok) {
+        const processedData = await response.json();
+        console.log('Processed data:', processedData);
+    } else {
+        console.error('Error:', response.statusText);
     }
-
-    const result = await response.json();
-    return result;
 }
