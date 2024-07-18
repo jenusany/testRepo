@@ -2,17 +2,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
 def process():
-    data = request.get_json()
-    # Perform your Python operations on the data here
-    processed_data = data_processing_function(data)
-    return jsonify(processed_data)
-
-def data_processing_function(data):
-    # Replace this with your actual data processing logic
-    processed_data = {"IT": "WORKS"}
-    return processed_data
+    return jsonify({"IT": "WORKS"})
 
 
 if __name__ == '__main__':
