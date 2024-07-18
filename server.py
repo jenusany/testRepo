@@ -11,7 +11,7 @@ def process():
 
 def data_processing_function(data):
     # Replace this with your actual data processing logic
-    processed_data = {"result": "processed", "original": data}
+    processed_data = {"IT": "WORKS"}
     return processed_data
 
 
