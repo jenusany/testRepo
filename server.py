@@ -1,18 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/process', methods=['POST'])
-def process_data():
-    data = request.json
-    # Perform your operations on the data here
-    processed_data = data_processing_function(data)
-    return jsonify(processed_data)
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-def data_processing_function(data):
-    # Example processing: modify the data in some way
-    data['processed'] = "test"
-    return data
+@app.route('/greet', methods=['POST'])
+def greet():
+    name = request.form.get('name')
+    return render_template('greet.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)
