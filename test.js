@@ -1,5 +1,5 @@
 async function sendDataToServer(data) {
-    const response = await fetch('http://18.222.68.130/', {
+    const response = await fetch('https://buzz-builder.com//process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -16,5 +16,5 @@ async function sendDataToServer(data) {
 }
 
 // Example usage:
-const data = { list:[ "this is good", "This sucks", "ew", "nice", "this is sick"] };
+const data = { list:[ "this is good", "This is terrible", "i hate it", "i dont like it", "this is a really cool product, i would definetly reccommend to others, and use it every day"]};
 sendDataToServer(data);
