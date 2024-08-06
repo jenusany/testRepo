@@ -6,7 +6,7 @@ document.getElementById('loginButton').onclick = function() {
     window.location.href = authUrl;
   };
 
-  const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get('code');
 
 if (code) {
@@ -32,7 +32,7 @@ fetch(`https://graph.facebook.com/v11.0/oauth/access_token?client_id=80324697196
             }
         })
   })
-  .catch(error => console.error('Error:', error));
+  .catch(error => alert('Error:', error));
 }
 
 function ownedPages(pageid, accessToken){

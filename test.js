@@ -9,11 +9,16 @@ async function sendDataToServer(data) {
     
     if (response.ok) {
         const processedData = await response.json();
-        console.log(processedData);
+        return(processedData);
     } else {
         console.error('Error:', response.statusText);
     }
 }
+
+document.getElementById("button").addEventListener("click", () => {
+    const data = { list:[ "this is good", "This is terrible", "i hate it", "i dont like it", "this is a really cool product, i would definetly reccommend to others, and use it every day"]};
+    document.getElementById("main").innerText = sendDataToServer(data);
+})
 
 // Example usage:
 const data = { list:[ "this is good", "This is terrible", "i hate it", "i dont like it", "this is a really cool product, i would definetly reccommend to others, and use it every day"]};
