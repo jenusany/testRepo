@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/testRepo/static/css/main.88c840ca.css",
-    "main.js": "/testRepo/static/js/main.c910e967.js",
+    "main.js": "/testRepo/static/js/main.2bafb443.js",
     "static/js/453.68693753.chunk.js": "/testRepo/static/js/453.68693753.chunk.js",
     "static/media/facebookLogo.png": "/testRepo/static/media/facebookLogo.18b985e6ed75cc216790.png",
     "index.html": "/testRepo/index.html",
     "main.88c840ca.css.map": "/testRepo/static/css/main.88c840ca.css.map",
-    "main.c910e967.js.map": "/testRepo/static/js/main.c910e967.js.map",
+    "main.2bafb443.js.map": "/testRepo/static/js/main.2bafb443.js.map",
     "453.68693753.chunk.js.map": "/testRepo/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88c840ca.css",
-    "static/js/main.c910e967.js"
+    "static/js/main.2bafb443.js"
   ]
 }
